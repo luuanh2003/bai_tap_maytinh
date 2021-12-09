@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4">
+            <input type="text" id="anh">
+        </td>
+    </tr>
+    <tr>
+        <td><button onclick="anh1('(')">(</button></td>
+        <td><button onclick="anh1(')')">)</button></td>
+        <td><button onclick="anh1('%')">%</button></td>
+        <td> <button onclick="reset('AC')">AC</button></td>
+    </tr>
+   <tr>
+       <td><button onclick="anh1 (7)">7</button></td>
+       <td><button onclick="anh1(8)">8</button></td>
+       <td><button onclick="anh1(9)">9</button></td>
+       <td><button onclick="anh1('/')">/</button></td>
+   </tr>
+    <tr>
+        <td><button onclick="anh1(4)">4</button></td>
+        <td><button onclick="anh1(5)">5</button></td>
+        <td><button onclick="anh1(6)">6</button></td>
+        <td><button onclick="anh1('*')">*</button></td>
+    </tr>
+    <td><button onclick="anh1(1)">1</button></td>
+    <td><button onclick="anh1(2)">2</button></td>
+    <td><button onclick="anh1(3)">3</button></td>
+    <td><button onclick="anh1('-')">-</button></td>
+    <tr>
+        <td><button onclick="anh1(0)">0</button></td>
+        <td><button onclick="anh1('.')">.</button></td>
+        <td><button onclick="ketqua('=')">=</button></td>
+        <td><button onclick="anh1('+')">+</button></td>
+    </tr>
+</table>
+<script>
+    function anh1(kitu){
+        document.getElementById('anh').value +=kitu;
+    }
+    function reset(){
+        document.getElementById('anh').value ="";
+    }
+    function ketqua() {
+        let phepTinh =  document.getElementById('anh').value;
+        document.getElementById('anh').value = eval(phepTinh);}
+</script>
+</body>
+</html>
